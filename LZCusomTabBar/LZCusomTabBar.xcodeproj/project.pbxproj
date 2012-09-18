@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9D868DF160857120058BD3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868DE160857120058BD3E /* UIKit.framework */; };
+		B9D868E1160857120058BD3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868E0160857120058BD3E /* Foundation.framework */; };
+		B9D868E3160857120058BD3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868E2160857120058BD3E /* CoreGraphics.framework */; };
+		B9D868E9160857120058BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9D868E7160857120058BD3E /* InfoPlist.strings */; };
+		B9D868EB160857120058BD3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D868EA160857120058BD3E /* main.m */; };
+		B9D868EF160857120058BD3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D868EE160857120058BD3E /* AppDelegate.m */; };
+		B9D868F2160857120058BD3E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D868F0160857120058BD3E /* MainStoryboard_iPhone.storyboard */; };
+		B9D868F5160857120058BD3E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D868F3160857120058BD3E /* MainStoryboard_iPad.storyboard */; };
+		B9D868F8160857120058BD3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D868F7160857120058BD3E /* ViewController.m */; };
+		B9D86900160857120058BD3E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868FF160857120058BD3E /* SenTestingKit.framework */; };
+		B9D86901160857120058BD3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868DE160857120058BD3E /* UIKit.framework */; };
+		B9D86902160857120058BD3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D868E0160857120058BD3E /* Foundation.framework */; };
+		B9D8690A160857120058BD3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9D86908160857120058BD3E /* InfoPlist.strings */; };
+		B9D8690D160857120058BD3E /* LZCusomTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D8690C160857120058BD3E /* LZCusomTabBarTests.m */; };
+		B9D8691B160858350058BD3E /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D86917160858350058BD3E /* CustomTabBar.m */; };
+		B9D8691C160858350058BD3E /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D86917160858350058BD3E /* CustomTabBar.m */; };
+		B9D8691D160858350058BD3E /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D8691A160858350058BD3E /* CustomTabBarItem.m */; };
+		B9D8691E160858350058BD3E /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D8691A160858350058BD3E /* CustomTabBarItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9D86903160857120058BD3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D868D1160857110058BD3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9D868D9160857120058BD3E;
+			remoteInfo = LZCusomTabBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9D868DA160857120058BD3E /* LZCusomTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZCusomTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D868DE160857120058BD3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B9D868E0160857120058BD3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B9D868E2160857120058BD3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B9D868E6160857120058BD3E /* LZCusomTabBar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LZCusomTabBar-Info.plist"; sourceTree = "<group>"; };
+		B9D868E8160857120058BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9D868EA160857120058BD3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9D868EC160857120058BD3E /* LZCusomTabBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LZCusomTabBar-Prefix.pch"; sourceTree = "<group>"; };
+		B9D868ED160857120058BD3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9D868EE160857120058BD3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9D868F1160857120058BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		B9D868F4160857120058BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B9D868F6160857120058BD3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B9D868F7160857120058BD3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9D868FE160857120058BD3E /* LZCusomTabBarTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCusomTabBarTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D868FF160857120058BD3E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B9D86907160857120058BD3E /* LZCusomTabBarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LZCusomTabBarTests-Info.plist"; sourceTree = "<group>"; };
+		B9D86909160857120058BD3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9D8690B160857120058BD3E /* LZCusomTabBarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZCusomTabBarTests.h; sourceTree = "<group>"; };
+		B9D8690C160857120058BD3E /* LZCusomTabBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZCusomTabBarTests.m; sourceTree = "<group>"; };
+		B9D86917160858350058BD3E /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBar.m; path = tabBar/CustomTabBar.m; sourceTree = "<group>"; };
+		B9D86918160858350058BD3E /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBar.h; path = tabBar/CustomTabBar.h; sourceTree = "<group>"; };
+		B9D86919160858350058BD3E /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarItem.h; path = tabBar/CustomTabBarItem.h; sourceTree = "<group>"; };
+		B9D8691A160858350058BD3E /* CustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarItem.m; path = tabBar/CustomTabBarItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9D868D7160857120058BD3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D868DF160857120058BD3E /* UIKit.framework in Frameworks */,
+				B9D868E1160857120058BD3E /* Foundation.framework in Frameworks */,
+				B9D868E3160857120058BD3E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9D868FA160857120058BD3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D86900160857120058BD3E /* SenTestingKit.framework in Frameworks */,
+				B9D86901160857120058BD3E /* UIKit.framework in Frameworks */,
+				B9D86902160857120058BD3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9D868CF160857110058BD3E = {
+			isa = PBXGroup;
+			children = (
+				B9D868E4160857120058BD3E /* LZCusomTabBar */,
+				B9D86905160857120058BD3E /* LZCusomTabBarTests */,
+				B9D868DD160857120058BD3E /* Frameworks */,
+				B9D868DB160857120058BD3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9D868DB160857120058BD3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9D868DA160857120058BD3E /* LZCusomTabBar.app */,
+				B9D868FE160857120058BD3E /* LZCusomTabBarTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9D868DD160857120058BD3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9D868DE160857120058BD3E /* UIKit.framework */,
+				B9D868E0160857120058BD3E /* Foundation.framework */,
+				B9D868E2160857120058BD3E /* CoreGraphics.framework */,
+				B9D868FF160857120058BD3E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9D868E4160857120058BD3E /* LZCusomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B9D86916160857F90058BD3E /* TabBar */,
+				B9D868ED160857120058BD3E /* AppDelegate.h */,
+				B9D868EE160857120058BD3E /* AppDelegate.m */,
+				B9D868F0160857120058BD3E /* MainStoryboard_iPhone.storyboard */,
+				B9D868F3160857120058BD3E /* MainStoryboard_iPad.storyboard */,
+				B9D868F6160857120058BD3E /* ViewController.h */,
+				B9D868F7160857120058BD3E /* ViewController.m */,
+				B9D868E5160857120058BD3E /* Supporting Files */,
+			);
+			path = LZCusomTabBar;
+			sourceTree = "<group>";
+		};
+		B9D868E5160857120058BD3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9D868E6160857120058BD3E /* LZCusomTabBar-Info.plist */,
+				B9D868E7160857120058BD3E /* InfoPlist.strings */,
+				B9D868EA160857120058BD3E /* main.m */,
+				B9D868EC160857120058BD3E /* LZCusomTabBar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9D86905160857120058BD3E /* LZCusomTabBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9D8690B160857120058BD3E /* LZCusomTabBarTests.h */,
+				B9D8690C160857120058BD3E /* LZCusomTabBarTests.m */,
+				B9D86906160857120058BD3E /* Supporting Files */,
+			);
+			path = LZCusomTabBarTests;
+			sourceTree = "<group>";
+		};
+		B9D86906160857120058BD3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9D86907160857120058BD3E /* LZCusomTabBarTests-Info.plist */,
+				B9D86908160857120058BD3E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9D86916160857F90058BD3E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B9D86918160858350058BD3E /* CustomTabBar.h */,
+				B9D86917160858350058BD3E /* CustomTabBar.m */,
+				B9D86919160858350058BD3E /* CustomTabBarItem.h */,
+				B9D8691A160858350058BD3E /* CustomTabBarItem.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9D868D9160857120058BD3E /* LZCusomTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9D86910160857120058BD3E /* Build configuration list for PBXNativeTarget "LZCusomTabBar" */;
+			buildPhases = (
+				B9D868D6160857120058BD3E /* Sources */,
+				B9D868D7160857120058BD3E /* Frameworks */,
+				B9D868D8160857120058BD3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZCusomTabBar;
+			productName = LZCusomTabBar;
+			productReference = B9D868DA160857120058BD3E /* LZCusomTabBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9D868FD160857120058BD3E /* LZCusomTabBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9D86913160857120058BD3E /* Build configuration list for PBXNativeTarget "LZCusomTabBarTests" */;
+			buildPhases = (
+				B9D868F9160857120058BD3E /* Sources */,
+				B9D868FA160857120058BD3E /* Frameworks */,
+				B9D868FB160857120058BD3E /* Resources */,
+				B9D868FC160857120058BD3E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9D86904160857120058BD3E /* PBXTargetDependency */,
+			);
+			name = LZCusomTabBarTests;
+			productName = LZCusomTabBarTests;
+			productReference = B9D868FE160857120058BD3E /* LZCusomTabBarTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9D868D1160857110058BD3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = D9527;
+			};
+			buildConfigurationList = B9D868D4160857110058BD3E /* Build configuration list for PBXProject "LZCusomTabBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9D868CF160857110058BD3E;
+			productRefGroup = B9D868DB160857120058BD3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9D868D9160857120058BD3E /* LZCusomTabBar */,
+				B9D868FD160857120058BD3E /* LZCusomTabBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9D868D8160857120058BD3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D868E9160857120058BD3E /* InfoPlist.strings in Resources */,
+				B9D868F2160857120058BD3E /* MainStoryboard_iPhone.storyboard in Resources */,
+				B9D868F5160857120058BD3E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9D868FB160857120058BD3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D8690A160857120058BD3E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9D868FC160857120058BD3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9D868D6160857120058BD3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D868EB160857120058BD3E /* main.m in Sources */,
+				B9D868EF160857120058BD3E /* AppDelegate.m in Sources */,
+				B9D868F8160857120058BD3E /* ViewController.m in Sources */,
+				B9D8691B160858350058BD3E /* CustomTabBar.m in Sources */,
+				B9D8691D160858350058BD3E /* CustomTabBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9D868F9160857120058BD3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D8690D160857120058BD3E /* LZCusomTabBarTests.m in Sources */,
+				B9D8691C160858350058BD3E /* CustomTabBar.m in Sources */,
+				B9D8691E160858350058BD3E /* CustomTabBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9D86904160857120058BD3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9D868D9160857120058BD3E /* LZCusomTabBar */;
+			targetProxy = B9D86903160857120058BD3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9D868E7160857120058BD3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9D868E8160857120058BD3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B9D868F0160857120058BD3E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9D868F1160857120058BD3E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B9D868F3160857120058BD3E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9D868F4160857120058BD3E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B9D86908160857120058BD3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9D86909160857120058BD3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9D8690E160857120058BD3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9D8690F160857120058BD3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9D86911160857120058BD3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZCusomTabBar/LZCusomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "LZCusomTabBar/LZCusomTabBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B9D86912160857120058BD3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZCusomTabBar/LZCusomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "LZCusomTabBar/LZCusomTabBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B9D86914160857120058BD3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LZCusomTabBar.app/LZCusomTabBar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZCusomTabBar/LZCusomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "LZCusomTabBarTests/LZCusomTabBarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B9D86915160857120058BD3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LZCusomTabBar.app/LZCusomTabBar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LZCusomTabBar/LZCusomTabBar-Prefix.pch";
+				INFOPLIST_FILE = "LZCusomTabBarTests/LZCusomTabBarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9D868D4160857110058BD3E /* Build configuration list for PBXProject "LZCusomTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D8690E160857120058BD3E /* Debug */,
+				B9D8690F160857120058BD3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9D86910160857120058BD3E /* Build configuration list for PBXNativeTarget "LZCusomTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D86911160857120058BD3E /* Debug */,
+				B9D86912160857120058BD3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B9D86913160857120058BD3E /* Build configuration list for PBXNativeTarget "LZCusomTabBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D86914160857120058BD3E /* Debug */,
+				B9D86915160857120058BD3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9D868D1160857110058BD3E /* Project object */;
+}
