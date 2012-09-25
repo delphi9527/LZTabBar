@@ -3,22 +3,19 @@
 //  NewTagged
 //
 //  Created by lin zheng on 5/14/12.
-//  Copyright (c) 2012 D9527, Inc. All rights reserved.
+//  Copyright (c) 2012 yasofon, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#define CustomTabBarResignNotificaition @"CustomTabBarResignNotificaition"
+
 @class CustomTabBar;
 @protocol TabBarDelegate <NSObject>
 @optional
-- (void)tabBar:(CustomTabBar *)tabBar selectedAtIndex:(NSUInteger)index tabBarTag:(int)tabTag;
+- (void)tabBar:(CustomTabBar *)tabBar
+selectedAtIndex:(NSUInteger)index;
+
 @end
 @interface CustomTabBar : UIView
-
-@property (nonatomic,strong) NSArray *itemArray;
-@property (nonatomic,strong) UIImageView *bgImageView;
-@property (nonatomic,weak) id<TabBarDelegate> delegate;
-
 - (id)initRegularBarWithFrame:(CGRect)frame
           backgroundImageView:(UIImageView *)imgView
               backgroundColor:(UIColor *)color
@@ -26,14 +23,12 @@
                     itemWidth:(float)width
                         items:(NSMutableArray *)items;
 
-- (id)initIrigularWithFrame:(CGRect)frame
+- (id)initIrigularBarWithFrame:(CGRect)frame
         backgroundImage:(UIImage *)image
             backgroundColor:(UIColor *)color
                       items:(NSArray *)items;
-- (void)loadActivities:(id)sender;
-- (void)selectItemAtIndex:(int)index;
-- (void)registerNotification;
-- (void)resignFirstResponder:(NSNotification *)notification;
+
+- (void)setItemBadgeNum:(int)number atItemIndex:(int)index;
 
 @end
 

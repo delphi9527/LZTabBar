@@ -220,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = D9527;
+				ORGANIZATIONNAME = yasofon;
 			};
 			buildConfigurationList = B9D868D4160857110058BD3E /* Build configuration list for PBXProject "LZCusomTabBar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -468,6 +468,7 @@
 				B9D86912160857120058BD3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9D86913160857120058BD3E /* Build configuration list for PBXNativeTarget "LZCusomTabBarTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +477,7 @@
 				B9D86915160857120058BD3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
