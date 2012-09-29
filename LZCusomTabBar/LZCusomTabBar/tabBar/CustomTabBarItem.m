@@ -9,10 +9,9 @@
 #import "CustomTabBarItem.h"
 
 @implementation CustomTabBarItem
-
 @synthesize selectedImgStr = _selectedImgStr;
 @synthesize unSelectedImgStr = _unSelectedImgStr;
 @synthesize width = _width;
 @synthesize height = _height;
-
+@synthesize badgeStr = _badgeStr;
 @end

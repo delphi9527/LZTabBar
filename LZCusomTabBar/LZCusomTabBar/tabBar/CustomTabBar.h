@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class CustomTabBar;
-@protocol TabBarDelegate <NSObject>
+@protocol CustomTabBarDelegate <NSObject>
 @optional
-- (void)tabBar:(CustomTabBar *)tabBar
-selectedAtIndex:(NSUInteger)index;
+- (void)tabBar:(CustomTabBar *)tabBar selectedAtIndex:(NSUInteger)index;
 
 @end
 @interface CustomTabBar : UIView
+@property (weak,nonatomic) id<CustomTabBarDelegate> delegate;
+
 - (id)initRegularBarWithFrame:(CGRect)frame
           backgroundImageView:(UIImageView *)imgView
               backgroundColor:(UIColor *)color
@@ -28,8 +29,8 @@ selectedAtIndex:(NSUInteger)index;
             backgroundColor:(UIColor *)color
                       items:(NSArray *)items;
 
-- (void)setItemBadgeNum:(int)number atItemIndex:(int)index;
-
+- (void)setItemBadgeNum:(int)number atIndex:(int)index;
+- (void)selectItemAtIndex:(int)index;
 @end
 
 

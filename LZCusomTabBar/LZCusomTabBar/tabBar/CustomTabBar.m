@@ -5,15 +5,16 @@
 //  Created by lin zheng on 5/14/12.
 //  Copyright (c) 2012 yasofon, Inc. All rights reserved.
 //
-
-#import "CustomTabBarItem.h"
 #import "CustomTabBar.h"
-#define kButtonBaseTag 1001
+#import "CustomTabBarItem.h"
+#import "CustomTabBarItemView.h"
+#define kViewBaseTag 1001
 
 @interface CustomTabBar ()
-@property (strong,nonatomic) NSArray *itemArray;
-@property (strong,nonatomic) UIImageView *bgImageView;
-@property (weak,nonatomic) id<TabBarDelegate> delegate;
+@property (strong, nonatomic) NSArray *itemArray;
+@property (strong, nonatomic) NSMutableArray *itemViews;
+@property (strong, nonatomic) UIImageView *bgImageView;
+
 - (void)tapItem:(id)sender;
 @end
 
@@ -22,6 +23,7 @@
 @synthesize itemArray = _itemArray;
 @synthesize bgImageView = _bgImageView;
 @synthesize delegate = _delegate;
+@synthesize itemViews = _itemViews;
 
 - (id)initRegularBarWithFrame:(CGRect)frame
           backgroundImageView:(UIImageView *)imgView
@@ -56,19 +58,30 @@
         for (int index = 0; index< [_itemArray count]; index++)
         {
             CustomTabBarItem *item = [_itemArray objectAtIndex:index];
+            CustomTabBarItemView *aView = [[CustomTabBarItemView alloc] init];
+            aView.frame = CGRectMake(leftGap + width * index, topGap, width, height);
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(leftGap + width * index, topGap, width, height);
+            button.frame = CGRectMake(0.0, 0.0, width, height);
             UILabel *label = [[UILabel alloc]initWithFrame:button.bounds];
             label.font = [UIFont fontWithName:@"Arial-BoldMT" size:12];
             label.textAlignment = UITextAlignmentCenter;
             label.textColor = [UIColor whiteColor];
             label.backgroundColor = [UIColor clearColor];
             [button addSubview:label];
-            button.tag = kButtonBaseTag + index;
+            button.tag = kViewBaseTag + index;
             UIImage *img = [UIImage imageNamed:item.unSelectedImgStr];
             button.imageView.image = img;
             [button setBackgroundImage:img forState:UIControlStateNormal];
             [button addTarget:self action:@selector(tapItem:) forControlEvents:UIControlEventTouchUpInside];
+            
+            aView.button = button;
+            
+            UIButton *badgeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [badgeButton setBackgroundImage:[UIImage imageNamed:@"red-badge.png"] forState:UIControlStateNormal];
+            aView.badgeButton = badgeButton;
+            
+            aView.badgeImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"red-badge.png"]];
+            aView.badgeImageView.frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
             [self addSubview:button];
 
         }
@@ -98,40 +111,57 @@
             return self;
         }
         self.itemArray = items;
-        
+        self.itemViews = [[NSMutableArray alloc] init];
         float totalWidth = .0;
         float totalHeight = .0;
         
-        for (id aItem in items) {
+        for (id aItem in _itemArray) {
             if ([aItem isKindOfClass:[CustomTabBarItem class]] == NO) {
                 return self;
             }
-            CustomTabBarItem *aItem = (CustomTabBarItem *)aItem;
-            totalWidth = totalWidth + aItem.width;
-            if (aItem.height > totalHeight) {
+            CustomTabBarItem *item = (CustomTabBarItem *)aItem;
+            totalWidth = totalWidth + item.width;
+            if (item.height > totalHeight) {
                 //we store the maximal height of all the items
-                totalHeight = aItem.height;
+                totalHeight = item.height;
             }
         }
+        if (totalHeight <= 0) {
+            totalHeight = frame.size.height;
+        }
+        if (totalWidth <= 0) {
+            totalWidth = frame.size.width;
+        }
         
-        self.frame = CGRectMake(.0, .0, totalWidth, totalHeight);
         float originX = .0;
         float originY = .0;
         for (int index = 0; index< [_itemArray count]; index++)
         {
             CustomTabBarItem *item = [_itemArray objectAtIndex:index];
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            CustomTabBarItemView *aView = [[CustomTabBarItemView alloc] init];
+            [_itemViews addObject:aView];
             originY = totalHeight - item.height;
-            button.frame = CGRectMake(originX, originY, item.width, item.height);
+            aView.frame = CGRectMake(originX, originY, item.width, item.height);
             originX = originX + item.width;
-            button.tag = kButtonBaseTag + index;
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0, 0.0, item.width, item.height);
+
             UIImage *img = [UIImage imageNamed:item.unSelectedImgStr];
             button.imageView.image = img;
             [button setBackgroundImage:img forState:UIControlStateNormal];
             [button addTarget:self action:@selector(tapItem:) forControlEvents:UIControlEventTouchUpInside];
-            [self addSubview:button];
+            aView.tag = kViewBaseTag + index;
+            button.tag = aView.tag;
+            aView.button = button;
+            aView.badgeImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"red-badge.png"]];
+            aView.badgeImageView.frame = CGRectMake(item.width - 20.0, 5.0, 20.0, 20.0);
+            aView.badgeLabel = [[UILabel alloc] initWithFrame:CGRectMake(item.width - 20.0, 5.0, 20.0, 20.0)];
+            [aView setBadgeCount:0];
+            [self addSubview:aView];
         }
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, totalWidth, totalHeight);
     }
+    
     return self;
 }
 
@@ -139,7 +169,7 @@
 {
     for (int i = 0; i< [_itemArray count]; i++) {
         CustomTabBarItem *aItem = [_itemArray objectAtIndex:i];
-        int buttonTag = i + kButtonBaseTag;
+        int buttonTag = i + kViewBaseTag;
         UIButton *button = (UIButton *)[self viewWithTag:buttonTag];
         button.imageView.image = [UIImage imageNamed:aItem.unSelectedImgStr];
         [button setBackgroundImage:[UIImage imageNamed:aItem.unSelectedImgStr] forState:UIControlStateNormal];
@@ -149,27 +179,34 @@
 - (void)tapItem:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    int selectedIndex = button.tag - kButtonBaseTag;
-    for (int index = 0; index < [_itemArray count]; index++) {
-        CustomTabBarItem *aItem = [_itemArray objectAtIndex:index];
-        if (index == selectedIndex)
-        {
-            button.imageView.image = [UIImage imageNamed:aItem.selectedImgStr];
-            [button setBackgroundImage:[UIImage imageNamed:aItem.selectedImgStr] forState:UIControlStateNormal];
-        }
-        else {
-            int buttonTag = index + kButtonBaseTag;
-            UIButton *otherButton = (UIButton *)[self viewWithTag:buttonTag];
-            otherButton.imageView.image = [UIImage imageNamed:aItem.unSelectedImgStr];
-            [otherButton setBackgroundImage:[UIImage imageNamed:aItem.unSelectedImgStr] forState:UIControlStateNormal];
-        }
-    }
-    [_delegate tabBar:self selectedAtIndex:selectedIndex];
+    int selectedIndex = button.tag - kViewBaseTag;
+    [self selectItemAtIndex:selectedIndex];
 }
 
-- (void)setItemBadgeNum:(int)number atItemIndex:(int)index
+- (void)selectItemAtIndex:(int)index
 {
-    
+    for (int i = 0; i < [_itemArray count]; i++) {
+        int viewTag = i + kViewBaseTag;
+        CustomTabBarItemView *aView = (CustomTabBarItemView *)[self viewWithTag:viewTag];
+        UIButton *button = aView.button;
+        CustomTabBarItem *aItem = [_itemArray objectAtIndex:i];
+        if (index == i) {
+            button.imageView.image = [UIImage imageNamed:aItem.selectedImgStr];
+            [button setBackgroundImage:[UIImage imageNamed:aItem.selectedImgStr] forState:UIControlStateNormal];
+        }else {
+            button.imageView.image = [UIImage imageNamed:aItem.unSelectedImgStr];
+            [button setBackgroundImage:[UIImage imageNamed:aItem.unSelectedImgStr] forState:UIControlStateNormal];
+        }
+    }
+    if (index >=0 && index < [_itemArray count]) {
+      [_delegate tabBar:self selectedAtIndex:index];  
+    }
+}
+
+- (void)setItemBadgeNum:(int)number atIndex:(int)index
+{
+    CustomTabBarItemView *aView = (CustomTabBarItemView *)[_itemViews objectAtIndex:index];
+    [aView setBadgeCount:number];
 }
 
 @end
